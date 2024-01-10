@@ -1,10 +1,10 @@
-Docker image based on Ubuntu:
+# Example Docker image based on Ubuntu:
 
 ```Dockerfile
-# Use the official Ubuntu base image from Docker Hub
+# official Ubuntu base image from DockerHub
 FROM ubuntu:latest
 
-# Update package lists and install a simple package (nano in this case)
+# update package lists and install a simple package 
 RUN apt-get update && apt-get install -y nano 
 
 # (Optional) Set a working directory inside the container
@@ -40,7 +40,7 @@ COPY . /app
 CMD ["/bin/bash"]
 ```
 
-Explanation of the commands used:
+## Explanation of the commands used:
 
 - `FROM`: Specifies the base image to use (in this case, the latest Ubuntu image available on Docker Hub).
 - `RUN`: Executes commands during the build process to install packages or perform specific tasks.
@@ -54,13 +54,13 @@ Explanation of the commands used:
 - `USER`: Sets the default user for the container.
 - `LABEL`: Adds metadata to the image.
 
-You can save this code in a file named `Dockerfile` and build the Docker image using the `docker build` command. For example:
+Save this code in a file named `Dockerfile` and build the Docker image using the `docker build` command. For example:
 
 ```bash
 docker build -t my-ubuntu-image .
 ```
 
-This command builds the Docker image using the Dockerfile in the current directory (`.`) and tags it as `my-ubuntu-image`. After the image is built, you can run a container from it using `docker run`:
+This command builds the Docker image using the Dockerfile in the current directory (`.`) and tags it as `my-ubuntu-image`. After the image is built, run a container from it using `docker run`:
 
 ```bash
 docker run -it --rm my-ubuntu-image
