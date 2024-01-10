@@ -10,7 +10,7 @@ Run the containers:
 docker run -it <image_name>
 ```
 
-## Cheatsheet (link_to_pdf)[https://docs.docker.com/get-started/docker_cheatsheet.pdf]
+## Cheatsheet [link_to_pdf](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
 
 Start the docker daemon:
 ```bash
